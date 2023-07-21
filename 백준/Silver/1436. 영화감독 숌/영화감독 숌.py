@@ -1,7 +1,7 @@
 n = int(input())
 num = 666
 while True:
-    if str(num).find('666') >= 0:
+    if '666' in str(num):
         n-=1
         if n < 1:
             break
