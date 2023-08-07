@@ -1,7 +1,8 @@
-n = int(input())
+import sys
+n = int(sys.stdin.readline().strip())
 li=set({})
 for i in range(n):
-    li.add(input())
+    li.add(sys.stdin.readline().strip())
 li = list(li)
 temp=""
 
