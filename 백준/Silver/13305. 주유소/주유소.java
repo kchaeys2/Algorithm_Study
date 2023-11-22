@@ -13,21 +13,13 @@ public class Main {
 			one[i] = sc.nextLong();
 		}
 		sc.close();
+		
 		long min = one[0];
-		for(int i=0;i<N-1;i++) {
-			if(one[i]<=min) min = one[i];
-		}
-
 		long sum =0;
 		
-		for(int i=0;i<N;i++) {
-			if(one[i]==min) {
-				for(int j=i;j<N-1;j++) {
-					sum+=one[i]*km[j];
-				}
-				break;
-			}
-			else sum+=one[i]*km[i];
+		for(int i=0;i<N-1;i++) {
+			if(one[i]<=min) min = one[i];
+			sum+=km[i]*min;
 		}
 		
 		System.out.print(sum);
